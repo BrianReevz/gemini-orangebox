@@ -1,0 +1,13 @@
+{
+  "name": "gemini-orangebox-client",
+  "version": "1.0.0",
+  "description": "Multi-project Vertex AI global endpoint client sample for Gemini OrangeBox",
+  "type": "module",
+  "main": "orangebox_client.mjs",
+  "scripts": {
+    "start": "node orangebox_client.mjs"
+  },
+  "dependencies": {
+    "@google/genai": "^1.0.0"
+  }
+}
