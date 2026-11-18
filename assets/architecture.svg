@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 232" width="980" height="232" role="img" aria-label="Gemini OrangeBox Three-Project Vertex AI Inference and Audit Logging Architecture">
+  <defs>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ff5a1f"/>
+    </marker>
+  </defs>
+
+  <!-- Outer Card -->
+  <rect x="4" y="4" width="972" height="224" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <text x="490" y="32" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">GEMINI ORANGEBOX — STRICT THREE-PROJECT BOUNDARY</text>
+
+  <!-- Box A: Client Workload Project -->
+  <rect x="28" y="52" width="230" height="152" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+  <rect x="44" y="66" width="198" height="22" rx="5" fill="#0f172a"/>
+  <text x="143" y="81" text-anchor="middle" fill="#38bdf8" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="10" font-weight="700" letter-spacing="0.8">1. CLIENT WORKLOAD PROJECT</text>
+  <text x="143" y="112" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" font-weight="700">App / Coding Harness</text>
+  <text x="143" y="138" text-anchor="middle" fill="#cbd5e1" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11.5">Authenticates via Local ADC</text>
+  <text x="143" y="160" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11">Zero Local Quota or Logs</text>
+  <text x="143" y="184" text-anchor="middle" fill="#64748b" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10">aiplatform.user on Project B</text>
+
+  <!-- Arrow 1: Project A -> Project B -->
+  <text x="316" y="112" text-anchor="middle" fill="#38bdf8" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" font-weight="600">global Endpoint</text>
+  <line x1="264" y1="128" x2="366" y2="128" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <text x="316" y="148" text-anchor="middle" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9.5">X-Goog-User-Project</text>
+
+  <!-- Box B: Model & Quota Project -->
+  <rect x="375" y="52" width="230" height="152" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <rect x="391" y="66" width="198" height="22" rx="5" fill="#0f172a"/>
+  <text x="490" y="81" text-anchor="middle" fill="#38bdf8" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="10" font-weight="700" letter-spacing="0.8">2. MODEL &amp; QUOTA PROJECT</text>
+  <text x="490" y="112" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" font-weight="700">Vertex AI (global)</text>
+  <text x="490" y="138" text-anchor="middle" fill="#cbd5e1" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11.5">Allowlisted Frontier Models</text>
+  <text x="490" y="160" text-anchor="middle" fill="#94a3b8" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11">Absorbs Quota &amp; Billing</text>
+  <text x="490" y="184" text-anchor="middle" fill="#64748b" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10">Owns Vertex AI P4SA</text>
+
+  <!-- Arrow 2: Project B -> Project C -->
+  <text x="663" y="112" text-anchor="middle" fill="#fb923c" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" font-weight="600">Server-Side Sink</text>
+  <line x1="611" y1="128" x2="713" y2="128" stroke="#ff5a1f" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <text x="663" y="148" text-anchor="middle" fill="#fdba74" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9.5">100% + OTel via P4SA</text>
+
+  <!-- Box C: Audit Logging Project (OrangeBox) -->
+  <rect x="722" y="52" width="230" height="152" rx="10" fill="#27150f" stroke="#ff5a1f" stroke-width="2"/>
+  <rect x="738" y="66" width="198" height="22" rx="5" fill="#431407"/>
+  <text x="837" y="81" text-anchor="middle" fill="#fb923c" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="10" font-weight="700" letter-spacing="0.8">3. AUDIT LOGGING PROJECT</text>
+  <text x="837" y="112" text-anchor="middle" fill="#fff7ed" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" font-weight="700">BigQuery (US Multi-Region)</text>
+  <text x="837" y="138" text-anchor="middle" fill="#fed7aa" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11.5">Pre-Created Dataset</text>
+  <text x="837" y="160" text-anchor="middle" fill="#fdba74" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11">Auto-Created Log Table</text>
+  <text x="837" y="184" text-anchor="middle" fill="#fb923c" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10">bq.user + bq.dataEditor</text>
+</svg>

@@ -4,11 +4,7 @@
 
 Turn-key setup scripts, Terraform IaC, and SDK samples for running **global-only** Vertex AI Frontier Models across a strict three-project boundary—recording every prompt and response to an isolated, "international orange" flight-recorder BigQuery project:
 
-```mermaid
-flowchart LR
-  A["Client Workload Project<br/>(App / Coding Harness)"] -->|"1. Inference + X-Goog-User-Project"| B["Model & Quota Project<br/>(Vertex AI global + P4SA)"]
-  B -->|"2. Server-side BQ Logging (100% + OTel)"| C["Audit Logging Project<br/>(BigQuery US Multi-Region)"]
-```
+![Gemini OrangeBox Three-Project Architecture](assets/architecture.svg)
 
 ## Why Three Projects?
 1. **Client Workload Project** (e.g., `my-client-workload-project`): Runs your application or coding harness using local ADC. Holds **no** local model quotas or prompt logs.
