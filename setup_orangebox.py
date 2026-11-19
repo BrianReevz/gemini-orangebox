@@ -423,6 +423,9 @@ def main() -> None:
                 print(f"  -> Configured {model_id} (HTTP {resp.status})")
         except urllib.error.HTTPError as exc:
             err_body = exc.read().decode("utf-8", errors="replace")
+            if exc.code == 409 and "ALREADY_EXISTS" in err_body and "same PublisherModelConfig" in err_body:
+                print(f"  -> {model_id} already configured identically (HTTP 409 ALREADY_EXISTS — unchanged)")
+                continue
             sys.exit(f"ERROR configuring {model_id} (HTTP {exc.code}): {err_body}")
 
     print(f"\n[5/5] Client Caller IAM on {model_proj}...")

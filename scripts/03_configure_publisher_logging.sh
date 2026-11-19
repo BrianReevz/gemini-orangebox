@@ -55,6 +55,15 @@ EOF
     -H "X-Goog-User-Project: ${MODEL_QUOTA_PROJECT_ID}" \
     -d "${PAYLOAD}")
 
+  if [[ "${HTTP_CODE}" == "409" ]]; then
+    RESP_BODY="$(<"${RESP_FILE}")"
+    if [[ "${RESP_BODY}" == *"ALREADY_EXISTS"* && "${RESP_BODY}" == *"same PublisherModelConfig"* ]]; then
+      echo "Already configured identically: ${MODEL_ID} -> ${BQ_OUTPUT_URI} (HTTP 409 ALREADY_EXISTS — unchanged)"
+      echo ""
+      continue
+    fi
+  fi
+
   if [[ "${HTTP_CODE}" -lt 200 || "${HTTP_CODE}" -ge 300 ]]; then
     echo "ERROR: Failed to configure ${MODEL_ID} (HTTP ${HTTP_CODE}):" >&2
     cat "${RESP_FILE}" >&2
