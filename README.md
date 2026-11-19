@@ -22,7 +22,7 @@ To keep everything transparent and easy to audit, [`cloudshell_setup.sh`](clouds
 2. Enables `bigquery.googleapis.com` and creates a `US` multi-region BigQuery dataset in your **Audit Logging Project**.
 3. Grants `roles/bigquery.user` (project) and `roles/bigquery.dataEditor` (scoped to that dataset) to the **Model & Quota Project's P4SA**.
 4. Calls `setPublisherModelConfig` on `global` for the configured models (defaults: `gemini-4-argon-cyber-permissive`, `gemini-4-carbon-cyber-permissive`, `gemini-3.8-flash-cyber`; customizable via `MODELS_CSV`).
-5. *(Optional)* Grants your **Client Caller Principal** `roles/aiplatform.user` and `roles/serviceusage.serviceUsageConsumer` on the **Model & Quota Project**.
+5. *(Optional)* Grants your **Client Caller Principal(s)** (e.g., `user:you@example.com` or `serviceAccount:app@my-client-workload-project.iam.gserviceaccount.com`; bare emails are auto-prefixed) `roles/aiplatform.user` and `roles/serviceusage.serviceUsageConsumer` on the **Model & Quota Project**.
 
 ---
 
